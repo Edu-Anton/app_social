@@ -2,7 +2,9 @@ const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const _ = require('underscore');
 
+
 const productos = require('../../database').productos;
+const validarProducto = require('./productos.validate');
 const productosRouter = express.Router();
 
 
@@ -11,13 +13,13 @@ productosRouter.get('/', (req, res) => {
     res.json(productos);
 })
 
-productosRouter.post('/', (req, res) => {
+productosRouter.post('/', validarProducto, (req, res) => {
     const newProduct = req.body;
-    if (!newProduct.moneda || !newProduct.precio || !newProduct.titulo) {
-        // Bad Request
-        res.status(400).send('Tu producto debe especificar un título, precio y moneda');
-        return;
-    }
+    // if (!newProduct.moneda || !newProduct.precio || !newProduct.titulo) {
+    //     // Bad Request
+    //     res.status(400).send('Tu producto debe especificar un título, precio y moneda');
+    //     return;
+    // }
     newProduct.id = uuidv4(); 
     productos.push(newProduct);
     res.status(201).json(newProduct);
@@ -34,15 +36,9 @@ productosRouter.get('/:id', (req, res) => {
     res.status(404).send(`el producto con id ${req.params.id} no existe`);
 })
 
-productosRouter.put('/:id', (req, res) => {
+productosRouter.put('/:id', validarProducto, (req, res) => {
     const { id } = req.params;
     const replacementProduct = req.body;
-
-    if (!replacementProduct.moneda || !replacementProduct.precio || !replacementProduct.titulo) {
-        // Bad Request
-        res.status(400).send('Tu producto debe especificar un título, precio y moneda');
-        return;
-    }
 
     const index = _.findIndex(productos, producto => producto.id == id);
 
