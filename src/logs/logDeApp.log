@@ -1,0 +1,55 @@
+info: Hola
+error: Algo malo
+warn: Algo inesperado ocurrió
+info: 2022-08-30T16:27:45.005Z Hola
+error: 2022-08-30T16:27:45.006Z Algo malo
+warn: 2022-08-30T16:27:45.007Z Algo inesperado ocurrió
+info: 2022-08-30T16:29:44.459Z Hola {"compañia":"appdelante"}
+error: 2022-08-30T16:29:44.461Z Algo malo
+warn: 2022-08-30T16:29:44.461Z Algo inesperado ocurrió
+info: 2022-08-30T16:48:28.970Z Hola {"compañia":"appdelante"}
+error: 2022-08-30T16:48:28.971Z Algo malo
+warn: 2022-08-30T16:48:28.972Z Algo inesperado ocurrió
+info: 2022-08-30T16:50:01.416Z Hola {"compañia":"appdelante"}
+error: 2022-08-30T16:50:01.417Z Algo malo
+warn: 2022-08-30T16:50:01.418Z Algo inesperado ocurrió
+info: 2022-08-30T17:00:36.711Z Hola {"compañia":"appdelante"}
+error: 2022-08-30T17:00:36.712Z Algo malo
+warn: 2022-08-30T17:00:36.713Z Algo inesperado ocurrió
+info: 2022-08-30T17:00:59.370Z Hola {"compañia":"appdelante"}
+error: 2022-08-30T17:00:59.372Z Algo malo
+warn: 2022-08-30T17:00:59.373Z Algo inesperado ocurrió
+info: 2022-08-30T17:02:01.531Z Escuchando en el puerto 3000
+info: 2022-08-30T17:18:37.069Z Escuchando en el puerto 3000
+info: 2022-08-30T17:23:04.602Z Escuchando en el puerto 3000
+info: 2022-08-30T17:25:02.228Z Escuchando en el puerto 3000
+error: 2022-08-30T17:25:38.437Z uncaughtException: Router.use() requires a middleware function but got a Object
+TypeError: Router.use() requires a middleware function but got a Object
+    at Function.use (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\router\index.js:469:13)
+    at Function.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\application.js:227:21)
+    at Array.forEach (<anonymous>)
+    at Function.use (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\application.js:224:7)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:12:5)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12) {"date":"Tue Aug 30 2022 12:25:38 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1114576},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":173549,"external":2228982,"heapTotal":19484672,"heapUsed":12878624,"rss":42721280},"pid":12492,"uid":null,"version":"v16.14.0"},"stack":"TypeError: Router.use() requires a middleware function but got a Object\n    at Function.use (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\index.js:469:13)\n    at Function.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\application.js:227:21)\n    at Array.forEach (<anonymous>)\n    at Function.use (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\application.js:224:7)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:12:5)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)","trace":[{"column":13,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\index.js","function":"Function.use","line":469,"method":"use","native":false},{"column":21,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\application.js","function":null,"line":227,"method":null,"native":false},{"column":null,"file":null,"function":"Array.forEach","line":null,"method":"forEach","native":false},{"column":7,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\application.js","function":"Function.use","line":224,"method":"use","native":false},{"column":5,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":12,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":12,"file":"node:internal/modules/run_main","function":"Function.executeUserEntryPoint [as runMain]","line":77,"method":"executeUserEntryPoint [as runMain]","native":false}]}
+info: 2022-08-30T17:26:15.023Z Escuchando en el puerto 3000
+info: 2022-08-30T17:26:21.873Z ::1 - GET /productos HTTP/1.1 200 213 - 2.372 ms
+info: 2022-08-30T17:26:54.379Z ::1 - GET /productos HTTP/1.1 200 213 - 0.489 ms
+info: 2022-08-30T17:31:19.808Z ::1 - GET /productos HTTP/1.1 200 213 - 0.469 ms
+info: 2022-08-30T17:31:21.233Z ::1 - GET /productos HTTP/1.1 200 213 - 0.299 ms
+info: 2022-08-30T17:31:22.156Z ::1 - GET /productos HTTP/1.1 200 213 - 0.352 ms
+info: 2022-08-30T17:33:13.157Z ::1 - GET /productos HTTP/1.1 200 213 - 0.346 ms
+info: 2022-08-30T17:33:23.392Z ::1 - GET /productos HTTP/1.1 200 213 - 0.316 ms
+info: 2022-08-30T17:37:41.394Z Escuchando en el puerto 3000
+info: 2022-08-30T17:39:44.591Z Escuchando en el puerto 3000
+info: 2022-08-30T17:41:29.189Z Escuchando en el puerto 3000
+info: 2022-08-30T17:42:41.665Z Escuchando en el puerto 3000
+info: 2022-08-30T17:43:57.210Z Escuchando en el puerto 3000
+info: 2022-08-30T17:45:18.188Z Escuchando en el puerto 3000
+warn: 2022-08-30T17:47:42.194Z El siguiente producto no pasó la validación:  {"moneda":"USD","precio":"10","titulo":"Taza de café"}
+info: 2022-08-30T17:47:42.201Z ::1 - POST /productos HTTP/1.1 400 142 - 10.681 ms
+info: 2022-08-30T17:48:20.410Z Producto agregado a la colección de productos {"id":"a2c39eb6-8591-41d6-a186-108a496d2f91","moneda":"USD","precio":10,"titulo":"Taza de café"}
+info: 2022-08-30T17:48:20.415Z ::1 - POST /productos HTTP/1.1 201 97 - 7.645 ms

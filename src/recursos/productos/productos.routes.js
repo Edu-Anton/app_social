@@ -5,6 +5,7 @@ const _ = require('underscore');
 
 const productos = require('../../database').productos;
 const validarProducto = require('./productos.validate');
+const log = require('./../../utils/logger');
 const productosRouter = express.Router();
 
 
@@ -22,6 +23,7 @@ productosRouter.post('/', validarProducto, (req, res) => {
     // }
     newProduct.id = uuidv4(); 
     productos.push(newProduct);
+    log.info("Producto agregado a la colección de productos", newProduct);
     res.status(201).json(newProduct);
 });
 
@@ -45,6 +47,7 @@ productosRouter.put('/:id', validarProducto, (req, res) => {
     if (index !== -1) {
         replacementProduct.id = id;
         productos[index] = replacementProduct;
+        log.info(`Producto con id [${id}] reemplazado con nuevo producto`, replacementProduct);
         res.status(200).json(replacementProduct);
     } else {
         res.status(404).send(`el producto con id ${req.params.id} no existe`);
@@ -55,7 +58,8 @@ productosRouter.delete('/:id', (req, res) => {
     const { id } = req.params;
     const index = _.findIndex(productos, producto => producto.id == id);
     if ( index === -1 ) {
-        res.status(404).send(`el producto con id ${req.params.id} no existe`)
+        log.warn(`el producto con id ${req.params.id} no existe. Nada que borrar`);
+        res.status(404).send(`el producto con id ${req.params.id} no existe. Nada que borrar`);
         return
     }
     const deletedProduct = productos.splice(index, 1); 

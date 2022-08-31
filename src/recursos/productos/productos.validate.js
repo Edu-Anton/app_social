@@ -1,6 +1,7 @@
 const Joi = require('joi');
 
 const productos = require('../../database').productos;
+const log = require('./../../utils/logger');
 
 const schema = Joi.object().keys({
     titulo: Joi.string().max(100).required(),
@@ -17,6 +18,7 @@ const validarProducto = (req, res, next) => {
         const erroresDeValidacion = resultado.error.details.reduce((acumulador, error) => {
             return acumulador + `[${error.message}]\n`
         }, '');
+        log.warn('El siguiente producto no pasó la validación: ', req.body, erroresDeValidacion);
         res.status(400).send(`El producto en el body debe especificar título, precio, moneda. 
             Errores en tu request: 
             ${erroresDeValidacion}`
