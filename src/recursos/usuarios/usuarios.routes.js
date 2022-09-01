@@ -1,13 +1,14 @@
 const express = require('express');
 const _ = require('underscore');
-const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const { v4: uuidv4 } = require('uuid');
 
+const config = require('../../config');
 const log = require('./../../utils/logger');
-const validarUsuario = require('./usuarios.validate').validarUsuario;
-const validarPedidoDeLogin = require('./usuarios.validate').validarPedidoDeLogin;
 const usuarios = require('../../database').usuarios;
+const validarPedidoDeLogin = require('./usuarios.validate').validarPedidoDeLogin;
+const validarUsuario = require('./usuarios.validate').validarUsuario;
 
 const usuariosRouter = express.Router();
 
@@ -60,7 +61,7 @@ usuariosRouter.post('/login', validarPedidoDeLogin,(req, res) => {
         if (iguales) {
             log.info(`Usuario ${usuarioNoAutenticado.username} completó autenticación.`)
             // generar y enviar token
-            const token = jwt.sign({ id: usuarios[index].id }, 'esto es un secreto', { expiresIn: 86400 })
+            const token = jwt.sign({ id: usuarios[index].id }, config.jwt.secreto, { expiresIn: 86400 })
             log.info(`Usuario ${usuarioNoAutenticado.username} completó autenticación exitosamente.`)
             res.status(200).json({ token })
         } else {
