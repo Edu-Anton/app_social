@@ -53,3 +53,342 @@ warn: 2022-08-30T17:47:42.194Z El siguiente producto no pasó la validación:  {
 info: 2022-08-30T17:47:42.201Z ::1 - POST /productos HTTP/1.1 400 142 - 10.681 ms
 info: 2022-08-30T17:48:20.410Z Producto agregado a la colección de productos {"id":"a2c39eb6-8591-41d6-a186-108a496d2f91","moneda":"USD","precio":10,"titulo":"Taza de café"}
 info: 2022-08-30T17:48:20.415Z ::1 - POST /productos HTTP/1.1 201 97 - 7.645 ms
+info: 2022-08-31T12:59:10.002Z Escuchando en el puerto 3000
+info: 2022-08-31T12:59:34.760Z ::1 - GET /productos HTTP/1.1 304 - - 3.755 ms
+info: 2022-08-31T12:59:34.785Z ::1 - GET /favicon.ico HTTP/1.1 404 150 - 2.592 ms
+info: 2022-08-31T12:59:39.493Z ::1 - GET / HTTP/1.1 401 - - 1.389 ms
+info: 2022-08-31T12:59:45.282Z ::1 anton GET / HTTP/1.1 200 12 - 4.814 ms
+info: 2022-08-31T13:02:52.695Z ::1 anton GET /productos HTTP/1.1 304 - - 0.819 ms
+info: 2022-08-31T13:02:58.114Z ::1 anton GET / HTTP/1.1 304 - - 0.910 ms
+info: 2022-08-31T13:03:08.901Z ::1 anton GET / HTTP/1.1 304 - - 0.603 ms
+info: 2022-08-31T13:03:17.970Z ::1 anton GET / HTTP/1.1 304 - - 0.532 ms
+info: 2022-08-31T17:13:30.910Z Escuchando en el puerto 3000
+info: 2022-08-31T17:13:53.553Z Escuchando en el puerto 3000
+info: 2022-08-31T17:18:00.133Z Escuchando en el puerto 3000
+info: 2022-08-31T17:35:43.511Z Escuchando en el puerto 3000
+info: 2022-08-31T17:40:46.252Z Escuchando en el puerto 3000
+info: 2022-08-31T17:48:14.355Z Escuchando en el puerto 3000
+info: 2022-08-31T17:48:33.759Z Escuchando en el puerto 3000
+info: 2022-08-31T17:48:50.242Z Escuchando en el puerto 3000
+info: 2022-08-31T17:49:01.853Z Escuchando en el puerto 3000
+error: 2022-08-31T18:04:38.361Z uncaughtException: Route.post() requires a callback function but got a [object Undefined]
+Error: Route.post() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as post] (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as post] (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js:16:16)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:11:18) {"date":"Wed Aug 31 2022 13:04:38 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1203315},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":199940,"external":2602662,"heapTotal":20795392,"heapUsed":15749536,"rss":44920832},"pid":10644,"uid":null,"version":"v16.14.0"},"stack":"Error: Route.post() requires a callback function but got a [object Undefined]\n    at Route.<computed> [as post] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js:211:15)\n    at Function.proto.<computed> [as post] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\index.js:521:19)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js:16:16)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:11:18)","trace":[{"column":15,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js","function":"Route.<computed> [as post]","line":211,"method":"<computed> [as post]","native":false},{"column":19,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\index.js","function":"Function.proto.<computed> [as post]","line":521,"method":"<computed> [as post]","native":false},{"column":16,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js","function":null,"line":16,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":18,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":11,"method":null,"native":false}]}
+error: 2022-08-31T18:05:29.029Z uncaughtException: usuariosRouter is not defined
+ReferenceError: usuariosRouter is not defined
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:37:22)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47 {"date":"Wed Aug 31 2022 13:05:29 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1203366},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":199940,"external":2602662,"heapTotal":20795392,"heapUsed":15818936,"rss":45162496},"pid":5516,"uid":null,"version":"v16.14.0"},"stack":"ReferenceError: usuariosRouter is not defined\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:37:22)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n    at node:internal/main/run_main_module:17:47","trace":[{"column":22,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":37,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":12,"file":"node:internal/modules/run_main","function":"Function.executeUserEntryPoint [as runMain]","line":77,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"node:internal/main/run_main_module","function":null,"line":17,"method":null,"native":false}]}
+info: 2022-08-31T18:06:49.150Z Escuchando en el puerto 3000
+info: 2022-08-31T18:08:20.279Z ::1 - GET /usuarios HTTP/1.1 200 2 - 2.437 ms
+info: 2022-08-31T18:08:36.058Z ::1 - POST /usuarios HTTP/1.1 500 1491 - 3.081 ms
+info: 2022-08-31T18:08:43.581Z ::1 - POST /usuarios HTTP/1.1 500 1491 - 1.497 ms
+info: 2022-08-31T18:09:38.341Z ::1 - POST /usuarios HTTP/1.1 500 1491 - 0.508 ms
+info: 2022-08-31T18:12:53.602Z Escuchando en el puerto 3000
+info: 2022-08-31T18:15:35.708Z ::1 - POST /usuarios HTTP/1.1 500 1463 - 2.222 ms
+info: 2022-08-31T18:16:29.959Z Escuchando en el puerto 3000
+info: 2022-08-31T18:16:37.221Z Producto falló la validación {"0":{"context":{"key":"username","label":"username"},"message":"\"username\" is required","path":["username"],"type":"any.required"},"1":{"context":{"child":"usename","key":"usename","label":"usename","value":"Anton"},"message":"\"usename\" is not allowed","path":["usename"],"type":"object.unknown"}}
+info: 2022-08-31T18:16:37.227Z ::1 - POST /usuarios HTTP/1.1 400 224 - 9.117 ms
+info: 2022-08-31T18:19:08.426Z Producto falló la validación {"0":{"context":{"key":"username","label":"username"},"message":"\"username\" is required","path":["username"],"type":"any.required"},"1":{"context":{"child":"usename","key":"usename","label":"usename","value":"Anton2"},"message":"\"usename\" is not allowed","path":["usename"],"type":"object.unknown"}}
+info: 2022-08-31T18:19:08.428Z ::1 - POST /usuarios HTTP/1.1 400 224 - 3.397 ms
+info: 2022-08-31T18:19:28.727Z Producto falló la validación {"0":{"context":{"key":"username","label":"username"},"message":"\"username\" is required","path":["username"],"type":"any.required"},"1":{"context":{"child":"usename","key":"usename","label":"usename","value":"anton2"},"message":"\"usename\" is not allowed","path":["usename"],"type":"object.unknown"}}
+info: 2022-08-31T18:19:28.729Z ::1 - POST /usuarios HTTP/1.1 400 224 - 1.897 ms
+info: 2022-08-31T18:22:37.518Z Escuchando en el puerto 3000
+info: 2022-08-31T18:22:54.501Z Producto falló la validación {"0":{"context":{"key":"username","label":"username"},"message":"\"username\" is required","path":["username"],"type":"any.required"},"1":{"context":{"child":"usename","key":"usename","label":"usename","value":"anton2"},"message":"\"usename\" is not allowed","path":["usename"],"type":"object.unknown"}}
+info: 2022-08-31T18:22:54.508Z ::1 - POST /usuarios HTTP/1.1 400 224 - 10.909 ms
+info: 2022-08-31T18:23:53.650Z ::1 - POST /usuarios HTTP/1.1 500 1496 - 2.680 ms
+info: 2022-08-31T18:25:25.531Z Escuchando en el puerto 3000
+info: 2022-08-31T18:25:33.611Z ::1 - POST /usuarios HTTP/1.1 400 224 - 8.657 ms
+info: 2022-08-31T18:27:33.871Z Escuchando en el puerto 3000
+info: 2022-08-31T18:27:40.096Z ::1 - POST /usuarios HTTP/1.1 201 29 - 80.694 ms
+info: 2022-08-31T18:27:46.861Z ::1 - GET /usuarios HTTP/1.1 200 70 - 1.078 ms
+info: 2022-08-31T18:30:57.731Z Escuchando en el puerto 3000
+info: 2022-08-31T18:31:03.354Z ::1 - POST /usuarios HTTP/1.1 201 29 - 70.932 ms
+info: 2022-08-31T18:31:06.807Z ::1 - GET /usuarios HTTP/1.1 200 122 - 1.366 ms
+info: 2022-08-31T18:33:10.667Z Escuchando en el puerto 3000
+info: 2022-08-31T18:33:16.306Z Escuchando en el puerto 3000
+info: 2022-08-31T18:33:23.560Z ::1 - POST /usuarios HTTP/1.1 400 224 - 8.819 ms
+info: 2022-08-31T18:35:42.291Z Escuchando en el puerto 3000
+info: 2022-08-31T18:35:50.917Z ::1 - POST /usuarios HTTP/1.1 201 29 - 71.307 ms
+info: 2022-08-31T18:35:56.562Z ::1 - GET /usuarios HTTP/1.1 200 122 - 1.071 ms
+info: 2022-08-31T18:36:04.587Z Email o username ya existen en la base de datos
+info: 2022-08-31T18:36:04.590Z ::1 - POST /usuarios HTTP/1.1 409 53 - 2.689 ms
+info: 2022-08-31T18:38:48.705Z ::1 - POST /usuarios HTTP/1.1 201 29 - 70.849 ms
+info: 2022-08-31T18:38:51.698Z ::1 - GET /usuarios HTTP/1.1 200 244 - 0.453 ms
+error: 2022-08-31T18:40:42.253Z uncaughtException: Unexpected token 'return'
+D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.validate.js:18
+        resultado.error.details.map(error => return error.message);
+                                             ^^^^^^
+
+SyntaxError: Unexpected token 'return'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1032:15)
+    at Module._compile (node:internal/modules/cjs/loader:1067:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js:7:24)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14) {"date":"Wed Aug 31 2022 13:40:42 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1205479},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":199940,"external":2602662,"heapTotal":20795392,"heapUsed":15695512,"rss":45355008},"pid":12632,"uid":null,"version":"v16.14.0"},"stack":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js:18\n        resultado.error.details.map(error => return error.message);\n                                             ^^^^^^\n\nSyntaxError: Unexpected token 'return'\n    at Object.compileFunction (node:vm:352:18)\n    at wrapSafe (node:internal/modules/cjs/loader:1032:15)\n    at Module._compile (node:internal/modules/cjs/loader:1067:27)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js:7:24)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)","trace":[{"column":18,"file":"node:vm","function":"Object.compileFunction","line":352,"method":"compileFunction","native":false},{"column":15,"file":"node:internal/modules/cjs/loader","function":"wrapSafe","line":1032,"method":null,"native":false},{"column":27,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1067,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":24,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js","function":null,"line":7,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false}]}
+info: 2022-08-31T18:41:40.951Z Escuchando en el puerto 3000
+info: 2022-08-31T18:42:19.867Z Producto falló la validación {"0":"\"password\" length must be at least 6 characters long"}
+info: 2022-08-31T18:42:19.873Z ::1 - POST /usuarios HTTP/1.1 400 224 - 9.680 ms
+info: 2022-08-31T20:00:16.488Z Escuchando en el puerto 3000
+info: 2022-08-31T20:04:41.381Z Escuchando en el puerto 3000
+error: 2022-08-31T20:07:16.711Z uncaughtException: Cannot access 'bcrypt' before initialization
+ReferenceError: Cannot access 'bcrypt' before initialization
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\libs\auth.js:4:24)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:13:14)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10) {"date":"Wed Aug 31 2022 15:07:16 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1210674},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":199940,"external":2602662,"heapTotal":21057536,"heapUsed":15753704,"rss":45133824},"pid":13032,"uid":null,"version":"v16.14.0"},"stack":"ReferenceError: Cannot access 'bcrypt' before initialization\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\libs\\auth.js:4:24)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:13:14)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)","trace":[{"column":24,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\libs\\auth.js","function":null,"line":4,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":14,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":13,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false}]}
+error: 2022-08-31T20:08:04.487Z uncaughtException: HTTP Basic authentication strategy requires a verify function
+Error: HTTP Basic authentication strategy requires a verify function
+    at new BasicStrategy (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\passport-http\lib\passport-http\strategies\basic.js:46:22)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:16:14)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47 {"date":"Wed Aug 31 2022 15:08:04 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1210722},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":199940,"external":2602662,"heapTotal":20795392,"heapUsed":15730688,"rss":45203456},"pid":11540,"uid":null,"version":"v16.14.0"},"stack":"Error: HTTP Basic authentication strategy requires a verify function\n    at new BasicStrategy (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\passport-http\\lib\\passport-http\\strategies\\basic.js:46:22)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:16:14)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n    at node:internal/main/run_main_module:17:47","trace":[{"column":22,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\passport-http\\lib\\passport-http\\strategies\\basic.js","function":"new BasicStrategy","line":46,"method":null,"native":false},{"column":14,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":16,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":12,"file":"node:internal/modules/run_main","function":"Function.executeUserEntryPoint [as runMain]","line":77,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"node:internal/main/run_main_module","function":null,"line":17,"method":null,"native":false}]}
+error: 2022-08-31T20:08:40.719Z uncaughtException: HTTP Basic authentication strategy requires a verify function
+Error: HTTP Basic authentication strategy requires a verify function
+    at new BasicStrategy (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\passport-http\lib\passport-http\strategies\basic.js:46:22)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:16:14)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47 {"date":"Wed Aug 31 2022 15:08:40 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1210758},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":199940,"external":2602662,"heapTotal":20795392,"heapUsed":15847192,"rss":45305856},"pid":7672,"uid":null,"version":"v16.14.0"},"stack":"Error: HTTP Basic authentication strategy requires a verify function\n    at new BasicStrategy (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\passport-http\\lib\\passport-http\\strategies\\basic.js:46:22)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:16:14)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)\n    at node:internal/main/run_main_module:17:47","trace":[{"column":22,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\passport-http\\lib\\passport-http\\strategies\\basic.js","function":"new BasicStrategy","line":46,"method":null,"native":false},{"column":14,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":16,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":12,"file":"node:internal/modules/run_main","function":"Function.executeUserEntryPoint [as runMain]","line":77,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"node:internal/main/run_main_module","function":null,"line":17,"method":null,"native":false}]}
+info: 2022-08-31T20:10:38.051Z Escuchando en el puerto 3000
+info: 2022-08-31T20:11:31.915Z ::1 anton GET / HTTP/1.1 304 - - 7.494 ms
+info: 2022-08-31T20:11:48.267Z ::1 - GET / HTTP/1.1 401 - - 1.129 ms
+info: 2022-08-31T20:11:59.814Z ::1 anton GET / HTTP/1.1 200 12 - 1.873 ms
+info: 2022-08-31T20:18:07.311Z Escuchando en el puerto 3000
+info: 2022-08-31T22:09:16.767Z Escuchando en el puerto 3000
+info: 2022-08-31T22:10:46.694Z Escuchando en el puerto 3000
+info: 2022-08-31T22:11:17.654Z Escuchando en el puerto 3000
+error: 2022-08-31T22:14:25.599Z uncaughtException: Unexpected token ';'
+D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js:39
+            id: uuidv4();
+                        ^
+
+SyntaxError: Unexpected token ';'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1032:15)
+    at Module._compile (node:internal/modules/cjs/loader:1067:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:11:24)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14) {"date":"Wed Aug 31 2022 17:14:25 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1218302},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":209778,"external":2294324,"heapTotal":19222528,"heapUsed":13502816,"rss":42676224},"pid":5900,"uid":null,"version":"v16.14.0"},"stack":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js:39\n            id: uuidv4();\n                        ^\n\nSyntaxError: Unexpected token ';'\n    at Object.compileFunction (node:vm:352:18)\n    at wrapSafe (node:internal/modules/cjs/loader:1032:15)\n    at Module._compile (node:internal/modules/cjs/loader:1067:27)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:11:24)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)","trace":[{"column":18,"file":"node:vm","function":"Object.compileFunction","line":352,"method":"compileFunction","native":false},{"column":15,"file":"node:internal/modules/cjs/loader","function":"wrapSafe","line":1032,"method":null,"native":false},{"column":27,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1067,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":24,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":11,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false}]}
+error: 2022-08-31T22:14:58.995Z uncaughtException: Unexpected token ';'
+D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js:39
+            id: uuidv4();
+                        ^
+
+SyntaxError: Unexpected token ';'
+    at Object.compileFunction (node:vm:352:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1032:15)
+    at Module._compile (node:internal/modules/cjs/loader:1067:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:11:24)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14) {"date":"Wed Aug 31 2022 17:14:58 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1218335},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":209778,"external":2294324,"heapTotal":19484672,"heapUsed":13612768,"rss":42917888},"pid":12020,"uid":null,"version":"v16.14.0"},"stack":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js:39\n            id: uuidv4();\n                        ^\n\nSyntaxError: Unexpected token ';'\n    at Object.compileFunction (node:vm:352:18)\n    at wrapSafe (node:internal/modules/cjs/loader:1032:15)\n    at Module._compile (node:internal/modules/cjs/loader:1067:27)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:11:24)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)","trace":[{"column":18,"file":"node:vm","function":"Object.compileFunction","line":352,"method":"compileFunction","native":false},{"column":15,"file":"node:internal/modules/cjs/loader","function":"wrapSafe","line":1032,"method":null,"native":false},{"column":27,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1067,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":24,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":11,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false}]}
+info: 2022-08-31T22:16:17.035Z Escuchando en el puerto 3000
+info: 2022-08-31T22:17:47.543Z Escuchando en el puerto 3000
+error: 2022-08-31T22:26:21.726Z uncaughtException: Route.post() requires a callback function but got a [object Object]
+Error: Route.post() requires a callback function but got a [object Object]
+    at Route.<computed> [as post] (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as post] (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js:17:16)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js:11:24) {"date":"Wed Aug 31 2022 17:26:21 GMT-0500 (hora estándar de Colombia)","error":{},"exception":true,"os":{"loadavg":[0,0,0],"uptime":1219018},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":118870,"external":909962,"heapTotal":31019008,"heapUsed":12220928,"rss":46206976},"pid":16048,"uid":null,"version":"v16.14.0"},"stack":"Error: Route.post() requires a callback function but got a [object Object]\n    at Route.<computed> [as post] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js:211:15)\n    at Function.proto.<computed> [as post] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\index.js:521:19)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js:17:16)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js:11:24)","trace":[{"column":15,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js","function":"Route.<computed> [as post]","line":211,"method":"<computed> [as post]","native":false},{"column":19,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\index.js","function":"Function.proto.<computed> [as post]","line":521,"method":"<computed> [as post]","native":false},{"column":16,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js","function":null,"line":17,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":24,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js","function":null,"line":11,"method":null,"native":false}]}
+info: 2022-08-31T22:27:01.183Z Escuchando en el puerto 3000
+info: 2022-08-31T22:27:14.448Z Escuchando en el puerto 3000
+info: 2022-08-31T22:27:46.176Z ::1 - POST /login HTTP/1.1 404 145 - 3.467 ms
+info: 2022-08-31T22:27:55.422Z ::1 - POST /login HTTP/1.1 404 145 - 1.269 ms
+info: 2022-08-31T22:28:00.086Z ::1 - POST /login HTTP/1.1 404 145 - 0.171 ms
+info: 2022-08-31T22:28:29.369Z Producto falló la validación {"0":"\"password\" length must be at least 6 characters long"}
+info: 2022-08-31T22:28:29.372Z ::1 - POST /usuarios HTTP/1.1 400 224 - 9.620 ms
+info: 2022-08-31T22:28:35.721Z ::1 - POST /usuarios HTTP/1.1 201 29 - 69.886 ms
+info: 2022-08-31T22:28:40.945Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.871 ms
+info: 2022-08-31T22:29:18.824Z ::1 - POST /login HTTP/1.1 404 145 - 0.120 ms
+info: 2022-08-31T22:29:33.742Z ::1 - POST /login HTTP/1.1 404 145 - 0.151 ms
+info: 2022-08-31T22:30:17.006Z Escuchando en el puerto 3000
+info: 2022-08-31T22:30:24.679Z Escuchando en el puerto 3000
+info: 2022-08-31T22:30:28.738Z Escuchando en el puerto 3000
+info: 2022-08-31T22:30:40.690Z ::1 - GET /usuarios HTTP/1.1 200 2 - 4.045 ms
+info: 2022-08-31T22:30:45.747Z ::1 - POST /usuarios HTTP/1.1 201 29 - 70.955 ms
+info: 2022-08-31T22:30:48.242Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.455 ms
+info: 2022-08-31T22:31:07.519Z ::1 - POST /login HTTP/1.1 404 145 - 1.584 ms
+info: 2022-08-31T22:32:17.263Z ::1 - POST /lusuarios/ogin HTTP/1.1 404 154 - 0.274 ms
+info: 2022-08-31T22:32:24.822Z ::1 - POST /usuarios/ogin HTTP/1.1 404 153 - 0.891 ms
+info: 2022-08-31T22:32:33.755Z ::1 - POST /usuarios/login HTTP/1.1 400 95 - 0.909 ms
+info: 2022-08-31T22:32:39.502Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.452 ms
+info: 2022-08-31T22:33:00.292Z ::1 - POST /usuarios/login HTTP/1.1 400 95 - 0.375 ms
+info: 2022-08-31T22:33:35.672Z Escuchando en el puerto 3000
+info: 2022-08-31T22:33:43.514Z ::1 - GET /usuarios HTTP/1.1 200 2 - 2.336 ms
+info: 2022-08-31T22:33:46.109Z ::1 - POST /usuarios HTTP/1.1 201 29 - 73.733 ms
+info: 2022-08-31T22:33:48.570Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.836 ms
+info: 2022-08-31T22:34:03.764Z ::1 - POST /usuarios/login HTTP/1.1 400 95 - 0.665 ms
+info: 2022-08-31T22:34:05.658Z ::1 - POST /usuarios/login HTTP/1.1 400 95 - 0.455 ms
+info: 2022-08-31T22:34:06.427Z ::1 - POST /usuarios/login HTTP/1.1 400 95 - 0.509 ms
+info: 2022-08-31T22:35:40.031Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.240 ms
+info: 2022-08-31T22:35:41.116Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.310 ms
+info: 2022-08-31T22:35:51.667Z ::1 - POST /usuarios/login HTTP/1.1 400 95 - 0.519 ms
+info: 2022-08-31T22:37:07.308Z Escuchando en el puerto 3000
+info: 2022-08-31T22:37:13.090Z ::1 - POST /usuarios HTTP/1.1 201 29 - 74.935 ms
+info: 2022-08-31T22:37:15.050Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.808 ms
+info: 2022-08-31T22:37:29.856Z Usuario anton4 no completó autenticación. Contraseña incorrecta.
+info: 2022-08-31T22:37:29.858Z ::1 - POST /usuarios/login HTTP/1.1 400 82 - 69.742 ms
+info: 2022-08-31T22:40:11.382Z Escuchando en el puerto 3000
+info: 2022-08-31T22:40:20.023Z ::1 - POST /usuarios HTTP/1.1 201 29 - 77.641 ms
+info: 2022-08-31T22:40:24.040Z ::1 - GET /usuarios HTTP/1.1 200 167 - 1.566 ms
+info: 2022-08-31T22:40:42.373Z Usuario anton4 no completó autenticación. Contraseña incorrecta.
+warn: 2022-08-31T22:40:42.374Z undefined
+info: 2022-08-31T22:40:42.376Z ::1 - POST /usuarios/login HTTP/1.1 400 82 - 68.364 ms
+info: 2022-08-31T22:47:31.563Z Escuchando en el puerto 3000
+info: 2022-08-31T22:47:37.062Z ::1 - POST /usuarios HTTP/1.1 201 29 - 74.622 ms
+info: 2022-08-31T22:47:40.465Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.911 ms
+info: 2022-08-31T22:47:55.429Z Usuario anton4 no completó autenticación. Contraseña incorrecta.
+warn: 2022-08-31T22:47:55.430Z undefined
+info: 2022-08-31T22:47:55.432Z ::1 - POST /usuarios/login HTTP/1.1 400 82 - 70.800 ms
+info: 2022-08-31T22:48:33.284Z Escuchando en el puerto 3000
+info: 2022-08-31T22:48:40.582Z ::1 - POST /usuarios HTTP/1.1 201 29 - 74.820 ms
+info: 2022-08-31T22:48:43.849Z ::1 - GET /usuarios HTTP/1.1 200 167 - 1.215 ms
+info: 2022-08-31T22:48:56.629Z Usuario anton4 no completó autenticación. Contraseña incorrecta.
+warn: 2022-08-31T22:48:56.630Z undefined
+info: 2022-08-31T22:48:56.632Z ::1 - POST /usuarios/login HTTP/1.1 400 82 - 72.568 ms
+info: 2022-08-31T22:49:15.792Z Escuchando en el puerto 3000
+info: 2022-08-31T22:50:01.303Z Usuario anton4 no existe. No pudo ser autenticado.
+info: 2022-08-31T22:50:01.311Z ::1 - POST /usuarios/login HTTP/1.1 400 47 - 4.962 ms
+info: 2022-08-31T22:50:13.228Z ::1 - POST /usuarios HTTP/1.1 201 29 - 69.274 ms
+info: 2022-08-31T22:50:17.578Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.781 ms
+info: 2022-08-31T22:50:37.576Z Email o username ya existen en la base de datos
+info: 2022-08-31T22:50:37.578Z ::1 - POST /usuarios HTTP/1.1 409 53 - 2.620 ms
+info: 2022-08-31T22:50:40.422Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.280 ms
+info: 2022-08-31T22:50:42.910Z Usuario anton4 completó autenticación.
+info: 2022-08-31T22:50:42.920Z Usuario anton4 completó autenticación exitosamente.
+info: 2022-08-31T22:50:42.922Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 80.118 ms
+info: 2022-09-01T00:37:27.154Z Escuchando en el puerto 3000
+info: 2022-09-01T00:38:43.631Z ::1 - POST /usuarios HTTP/1.1 201 29 - 73.115 ms
+info: 2022-09-01T00:38:46.971Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.860 ms
+info: 2022-09-01T00:38:55.375Z Usuario anton4 completó autenticación.
+info: 2022-09-01T00:38:55.378Z Usuario anton4 completó autenticación exitosamente.
+info: 2022-09-01T00:38:55.380Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 73.890 ms
+info: 2022-09-01T00:39:29.863Z ::1 - GET / HTTP/1.1 401 - - 0.854 ms
+info: 2022-09-01T00:40:38.160Z Usuario anton4 suministro de token valido. Autenticación completada.
+info: 2022-09-01T00:40:38.162Z [object Object]
+info: 2022-09-01T00:40:38.166Z ::1 - GET / HTTP/1.1 200 12 - 4.993 ms
+info: 2022-09-01T00:41:16.138Z Escuchando en el puerto 3000
+info: 2022-09-01T00:41:53.328Z JWT token no es válido. Usuario con id 7e2a1376-fad7-4faf-8a09-e0b14efa4bd1 no existe
+info: 2022-09-01T00:41:53.335Z ::1 - GET / HTTP/1.1 401 - - 4.278 ms
+info: 2022-09-01T00:41:56.193Z JWT token no es válido. Usuario con id 7e2a1376-fad7-4faf-8a09-e0b14efa4bd1 no existe
+info: 2022-09-01T00:41:56.195Z ::1 - GET / HTTP/1.1 401 - - 1.519 ms
+info: 2022-09-01T00:41:57.929Z JWT token no es válido. Usuario con id 7e2a1376-fad7-4faf-8a09-e0b14efa4bd1 no existe
+info: 2022-09-01T00:41:57.932Z ::1 - GET / HTTP/1.1 401 - - 1.638 ms
+info: 2022-09-01T00:42:04.671Z Escuchando en el puerto 3000
+info: 2022-09-01T00:42:08.502Z ::1 - POST /usuarios HTTP/1.1 201 29 - 76.014 ms
+info: 2022-09-01T00:42:12.158Z Usuario anton4 completó autenticación.
+info: 2022-09-01T00:42:12.160Z Usuario anton4 completó autenticación exitosamente.
+info: 2022-09-01T00:42:12.162Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 74.546 ms
+info: 2022-09-01T00:42:30.357Z Usuario anton4 suministro de token valido. Autenticación completada.
+info: 2022-09-01T00:42:30.358Z [object Object]
+info: 2022-09-01T00:42:30.361Z ::1 - GET / HTTP/1.1 200 12 - 4.402 ms
+info: 2022-09-01T00:43:08.432Z Escuchando en el puerto 3000
+info: 2022-09-01T00:43:47.453Z ::1 - POST /usuarios HTTP/1.1 201 29 - 76.256 ms
+info: 2022-09-01T00:43:49.747Z Usuario anton4 completó autenticación.
+info: 2022-09-01T00:43:49.750Z Usuario anton4 completó autenticación exitosamente.
+info: 2022-09-01T00:43:49.753Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 78.903 ms
+info: 2022-09-01T00:44:05.384Z Usuario anton4 suministro de token valido. Autenticación completada.
+info: 2022-09-01T00:44:05.385Z [object Object]
+info: 2022-09-01T00:44:05.391Z ::1 - GET / HTTP/1.1 200 12 - 8.760 ms
+info: 2022-09-01T00:44:47.212Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.453 ms
+info: 2022-09-01T00:47:10.708Z Escuchando en el puerto 3000
+info: 2022-09-01T00:47:16.540Z Usuario anton4 no existe. No pudo ser autenticado.
+info: 2022-09-01T00:47:16.548Z ::1 - POST /usuarios/login HTTP/1.1 400 47 - 4.871 ms
+info: 2022-09-01T00:47:23.023Z Usuario anton4 no existe. No pudo ser autenticado.
+info: 2022-09-01T00:47:23.025Z ::1 - POST /usuarios/login HTTP/1.1 400 47 - 1.990 ms
+info: 2022-09-01T00:47:28.619Z ::1 - POST /usuarios HTTP/1.1 201 29 - 70.804 ms
+info: 2022-09-01T00:47:32.249Z ::1 - GET /usuarios HTTP/1.1 200 167 - 0.592 ms
+info: 2022-09-01T00:47:35.148Z Usuario anton4 completó autenticación.
+info: 2022-09-01T00:47:35.151Z Usuario anton4 completó autenticación exitosamente.
+info: 2022-09-01T00:47:35.153Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 75.382 ms
+info: 2022-09-01T00:47:52.691Z Usuario anton4 suministro de token valido. Autenticación completada.
+info: 2022-09-01T00:47:52.692Z [object Object]
+info: 2022-09-01T00:47:52.697Z ::1 - GET / HTTP/1.1 200 12 - 7.437 ms
+info: 2022-09-01T00:48:09.603Z Escuchando en el puerto 3000
+info: 2022-09-01T00:50:57.560Z Escuchando en el puerto 3000
+info: 2022-09-01T00:51:03.995Z ::1 - POST /usuarios HTTP/1.1 201 29 - 73.985 ms
+info: 2022-09-01T00:51:06.833Z Usuario anton4 completó autenticación.
+info: 2022-09-01T00:51:06.836Z Usuario anton4 completó autenticación exitosamente.
+info: 2022-09-01T00:51:06.839Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 73.828 ms
+info: 2022-09-01T00:51:21.048Z Usuario anton4 suministro de token valido. Autenticación completada.
+info: 2022-09-01T00:51:21.049Z anton4
+info: 2022-09-01T00:51:21.057Z ::1 - GET / HTTP/1.1 200 12 - 8.164 ms
+info: 2022-09-01T01:57:52.289Z Escuchando en el puerto 3000
+info: 2022-09-01T01:58:46.822Z Escuchando en el puerto 3000
+info: 2022-09-01T01:59:43.501Z Escuchando en el puerto 3000
+info: 2022-09-01T02:03:26.973Z Escuchando en el puerto 3000
+info: 2022-09-01T02:04:59.178Z Escuchando en el puerto 3000
+info: 2022-09-01T02:10:08.688Z Escuchando en el puerto 3000
+info: 2022-09-01T02:11:19.424Z Escuchando en el puerto 3000
+info: 2022-09-01T02:11:26.387Z Escuchando en el puerto 3000
+info: 2022-09-01T02:13:03.262Z Escuchando en el puerto 3000
+info: 2022-09-01T02:15:45.160Z Escuchando en el puerto 3000
+info: 2022-09-01T02:18:25.310Z Escuchando en el puerto 3000
+info: 2022-09-01T02:20:37.210Z Escuchando en el puerto 3000
+info: 2022-09-01T02:42:27.591Z ::1 - GET /productos HTTP/1.1 200 213 - 2.475 ms
+info: 2022-09-01T02:42:53.400Z Escuchando en el puerto 3000
+info: 2022-09-01T02:42:57.628Z ::1 - GET /productos HTTP/1.1 200 213 - 3.686 ms
+info: 2022-09-01T02:44:51.620Z ::1 - POST /productos HTTP/1.1 401 - - 1.083 ms
+info: 2022-09-01T02:44:58.776Z ::1 - POST /usuarios HTTP/1.1 201 29 - 72.214 ms
+info: 2022-09-01T02:45:10.343Z Usuario anton4 completó autenticación.
+info: 2022-09-01T02:45:10.346Z Usuario anton4 completó autenticación exitosamente.
+info: 2022-09-01T02:45:10.348Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 71.711 ms
+info: 2022-09-01T02:46:04.002Z Usuario anton4 suministro de token valido. Autenticación completada.
+warn: 2022-09-01T02:46:04.010Z El siguiente producto no pasó la validación:  {"moneda":"SOL","precio":"130","titulo":"Audifonos Philips"}
+info: 2022-09-01T02:46:04.013Z ::1 - POST /productos HTTP/1.1 400 142 - 10.878 ms
+info: 2022-09-01T02:46:34.897Z Usuario anton4 suministro de token valido. Autenticación completada.
+info: 2022-09-01T02:46:34.900Z Producto agregado a la colección de productos {"dueño":"anton4","id":"be7e14a8-7fa0-445d-8368-ec6165a7897b","moneda":"SOL","precio":130,"titulo":"Audifonos Philips"}
+info: 2022-09-01T02:46:34.902Z ::1 - POST /productos HTTP/1.1 201 120 - 4.341 ms
+info: 2022-09-01T02:46:43.213Z ::1 - GET /productos HTTP/1.1 200 334 - 0.375 ms
+info: 2022-09-01T02:47:19.096Z ::1 - POST /usuarios HTTP/1.1 201 29 - 67.717 ms
+info: 2022-09-01T02:47:47.378Z Usuario astrid completó autenticación.
+info: 2022-09-01T02:47:47.378Z Usuario astrid completó autenticación exitosamente.
+info: 2022-09-01T02:47:47.380Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 69.886 ms
+info: 2022-09-01T02:49:49.602Z Usuario astrid suministro de token valido. Autenticación completada.
+info: 2022-09-01T02:49:49.603Z Usuario astrid no es dueño de producto con id be7e14a8-7fa0-445d-8368-ec6165a7897b.
+info: 2022-09-01T02:49:49.605Z ::1 - DELETE /productos/be7e14a8-7fa0-445d-8368-ec6165a7897b HTTP/1.1 401 118 - 2.285 ms

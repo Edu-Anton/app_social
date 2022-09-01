@@ -4,6 +4,11 @@ const productos = [
     { id: '12347', titulo: 'micrófono blue yeti', precio: 100, moneda: 'USD'},
 ]
 
+const usuarios = [
+    
+]
+
 module.exports = {
-    productos
+    productos,
+    usuarios
 }
