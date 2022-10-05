@@ -3,90 +3,134 @@ const { v4: uuidv4 } = require('uuid');
 const _ = require('underscore');
 const passport = require('passport');
 
-const productos = require('../../database').productos;
-const validarProducto = require('./productos.validate');
 const log = require('./../../utils/logger');
+const productoController = require('./productos.controller'); 
+const validarProducto = require('./productos.validate');
+
 const productosRouter = express.Router();
 
 const jwtAuthenticate = passport.authenticate('jwt', { session: false}) // como si fuera un middleware
 
+// Middleware
+function validarId(req, res, next) {
+    let id = req.params.id
+    //regex
+    if (id.match(/^[a-fA-F0-9]{24}$/) === null) {
+        res.status(400).send(`El id [${id}] suministrado en el URL no es válido`)
+        return
+    }
+    next()
+}
+
 productosRouter.get('/', (req, res) => {
-    res.json(productos);
+    productoController.obtenerProductos()
+        .then(productos => {
+            res.json(productos);
+        })
+        .catch(err => {
+            res.status(500).send('Error al leer los productos de la base de datos.');
+        })
+})
+
+productosRouter.get('/:id', validarId, (req, res) => {
+    const { id } = req.params;
+    productoController.obtenerProducto(id) 
+        .then(producto => {
+            if (!producto) { //Manejo de error de que no existe el producto
+                res.sendStatus(404).send(`Producto con id [${id}] no existe.`)
+            } else {
+                res.json(producto);
+            }
+        })
+        .catch(err => {
+            log.error(`Excepción ocurrió al tratar de obtener producto con id [${id}]`, err)
+            res.status(500).send(`Error ocurrió obteniendo producto con id [${id}]`)
+        })
 })
 
 productosRouter.post('/', [jwtAuthenticate, validarProducto], (req, res) => {
-    const newProduct = {
-        ...req.body,
-        id: uuidv4(),
-        dueño: req.user.username
-    };
-    // if (!newProduct.moneda || !newProduct.precio || !newProduct.titulo) {
-    //     // Bad Request
-    //     res.status(400).send('Tu producto debe especificar un título, precio y moneda');
-    //     return;
-    // }
-    newProduct.id = uuidv4(); 
-    productos.push(newProduct);
-    log.info("Producto agregado a la colección de productos", newProduct);
-    res.status(201).json(newProduct);
+    
+    const owner = req.user.username
+    // console.log({...req.body, owner});
+    productoController.crearProducto(req.body, owner)
+        .then(producto => {
+            log.info('Producto agregado a la colección producto.', producto.toObject());
+            res.status(201).json(producto)
+        })
+        .catch(err => {
+            log.error('Producto no puedo ser creado', err);
+            res.status(500).send('Error ocurrió al tratar de crear el producto.');
+        })
 });
 
+productosRouter.put('/:id', [jwtAuthenticate, validarProducto], async (req, res) => {
+    
+    let {id} = req.params
+    let requestUsuario = req.user.username
+    let productoAReeemplazar
 
-productosRouter.get('/:id', (req, res) => {
-    for (let producto of productos) {
-        if (producto.id == req.params.id) { // ver el tema de doble igualdad y triple igualdad
+    try {
+        productoAReeemplazar = await productoController.obtenerProducto(id)
+    } catch (error) {
+        log.warn(`Excepción ocurrió al procesar modificación del producto con id [${id}]`, error)
+        res.status(500).send(`Error ocurrió modificando producto con id [${id}]`)
+        return
+    }    
+    
+    if (!productoAReeemplazar) {
+        res.status(404).send(`El producto con id [${id}] no existe.`)
+        return
+    }
+
+    if (productoAReeemplazar.dueño !== requestUsuario) {
+        log.warn(`Usuario [${requestUsuario}] no es dueño del producto con id [${id}]. Dueño real es [${productoAReeemplazar.dueño}]. Request no será procesado.`)
+        res.status(401).send(`No eres dueño del producto con id [${id}]. Sólo puedes modificar productos creados por tí`);
+        return
+    }
+
+    productoController.reemplazarProducto(id, req.body, requestUsuario)
+        .then(producto => {
             res.json(producto)
-            return
-        }
-    }
-    res.status(404).send(`el producto con id ${req.params.id} no existe`);
+            log.info(`Producto con id [${id}] reemplazado con nuevo producto`, producto.toObject()) //toObject función para obtener las propiedades
+        })
+        .catch(err => {
+            log.error(`Excepción al tratar de reemplazar producto con id [${id}]`, err)
+            res.status(500).send(`Error ocurrió reemplazando producto con id [${id}]`)
+        })
 })
 
-productosRouter.put('/:id', [jwtAuthenticate, validarProducto], (req, res) => {
-    // const { id } = req.params;
-    const replacementProduct = {
-        ...req.body,
-        id: req.params.id,
-        dueño: req.user.username
-    };
-
-    const index = _.findIndex(productos, producto => producto.id == replacementProduct.id);
-
-    if (index !== -1) {
-        // replacementProduct.id = id;
-
-        if (productos[index].dueño !== replacementProduct.dueño){
-            log.info(`Usuario ${req.user.username} no es dueño de producto con id ${replacementProduct.id}.`)
-            res.status(401).send(`No eres dueño del producto con id ${replacementProduct.id}. Sólo puedes modificar productos creados por tí`);
-            return
-        }
-
-        productos[index] = replacementProduct;
-        log.info(`Producto con id [${replacementProduct.id}] reemplazado con nuevo producto`, replacementProduct);
-        res.status(200).json(replacementProduct);
-    } else {
-        res.status(404).send(`el producto con id ${replacementProduct.id} no existe`);
-    }
-})
-
-productosRouter.delete('/:id', jwtAuthenticate, (req, res) => {
+productosRouter.delete('/:id', [jwtAuthenticate, validarId], async(req, res) => {
     const { id } = req.params;
-    const index = _.findIndex(productos, producto => producto.id == id);
-    if ( index === -1 ) {
-        log.warn(`el producto con id ${req.params.id} no existe. Nada que borrar`);
-        res.status(404).send(`el producto con id ${req.params.id} no existe. Nada que borrar`);
+    let productoABorrar
+
+    try {
+        productoABorrar = await productoController.obtenerProducto(id)
+    } catch (error) {
+        log.error(`Excepción ocurrió al procesar el borrado de producto con id [${id}]`, err)
+        res.status(500).send(`Error ocurrió borrando producto con id [${id}]`)
         return
     }
 
-    if (productos[index].dueño !== req.user.dueño){
-        log.info(`Usuario ${req.user.username} no es dueño de producto con id ${productos[index].id}.`)
-        res.status(401).send(`No eres dueño del producto con id ${productos[index].id}. Sólo puedes borrar productos creados por tí`)
+    if ( !productoABorrar ) {
+        log.info(`el producto con id ${id} no existe. Nada que borrar`);
+        res.status(404).send(`el producto con id ${id} no existe. Nada que borrar`);
         return
     }
 
-    log.info(`Producto con id [${req.params.id}] fue borrado.`)
-    const deletedProduct = productos.splice(index, 1); 
-    res.json(deletedProduct);
+    let usuarioAutenticado = req.user.username
+    if (productoABorrar.dueño !== usuarioAutenticado){
+        log.info(`Usuario ${usuarioAutenticado} no es dueño de producto con id [${id}]. Dueño real es ${productoABorrar.dueño}. Request no será procesado.`)
+        res.status(401).send(`No eres dueño del producto con id [${id}]. Sólo puedes borrar productos creados por tí.`)
+        return
+    }
+
+    try {
+        let productoBorrado = await productoController.borrarProducto(id)
+        log.info(`Producto con id [${id}] fue borrado.`)
+        res.json(productoBorrado);
+    } catch (error) {
+        res.status(500).send(`Error ocurrió borrando producto con id [${id}]`)   
+    }
 });
 
 module.exports = productosRouter;

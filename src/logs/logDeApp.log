@@ -407,3 +407,176 @@ TypeError: Assignment to constant variable.
 info: 2022-09-01T13:40:27.231Z Escuchando en el puerto 3000
 info: 2022-09-01T13:42:01.778Z Escuchando en el puerto 3000
 info: 2022-09-01T13:50:47.187Z Escuchando en el puerto 3000
+info: 2022-09-01T14:17:36.473Z Escuchando en el puerto 3000
+info: 2022-09-01T14:19:57.306Z Escuchando en el puerto 3000
+info: 2022-09-01T14:26:16.891Z Escuchando en el puerto 3000
+info: 2022-09-01T14:29:16.217Z Escuchando en el puerto 3000
+info: 2022-09-01T14:40:40.535Z Escuchando en el puerto 3000
+info: 2022-09-01T14:41:22.372Z Escuchando en el puerto 3000
+info: 2022-09-01T14:44:27.049Z Escuchando en el puerto 3000
+info: 2022-09-01T14:45:26.730Z Escuchando en el puerto 3000
+info: 2022-09-01T14:46:08.027Z Escuchando en el puerto 3000
+info: 2022-09-01T14:47:16.266Z Escuchando en el puerto 3000
+info: 2022-09-01T14:47:29.817Z Escuchando en el puerto 3000
+info: 2022-09-01T14:49:12.314Z Escuchando en el puerto 3000
+info: 2022-09-01T14:49:17.120Z Escuchando en el puerto 3000
+info: 2022-09-01T14:49:54.357Z Escuchando en el puerto 3000
+info: 2022-09-01T14:50:05.283Z Escuchando en el puerto 3000
+info: 2022-09-01T15:32:03.861Z Escuchando en el puerto 3000
+info: 2022-09-01T15:33:50.544Z Escuchando en el puerto 3000
+info: 2022-09-01T15:40:42.786Z Escuchando en el puerto 3000
+info: 2022-09-01T15:40:48.828Z ::1 - GET / HTTP/1.1 401 - - 1.183 ms
+info: 2022-09-01T15:40:48.867Z ::1 - GET /favicon.ico HTTP/1.1 404 150 - 3.783 ms
+info: 2022-09-01T15:40:56.267Z ::1 - GET /usuarios HTTP/1.1 200 2 - 1.811 ms
+info: 2022-09-01T15:41:45.353Z Escuchando en el puerto 3000
+info: 2022-09-01T15:42:03.603Z Escuchando en el puerto 3000
+info: 2022-09-01T15:42:24.224Z Escuchando en el puerto 3000
+info: 2022-09-01T15:42:57.221Z Escuchando en el puerto 3000
+info: 2022-09-01T15:43:03.417Z Escuchando en el puerto 3000
+info: 2022-09-01T15:43:20.798Z Escuchando en el puerto 3000
+info: 2022-09-01T15:43:32.691Z Escuchando en el puerto 3000
+info: 2022-09-01T15:44:34.935Z Escuchando en el puerto 3000
+info: 2022-09-01T15:44:47.754Z Escuchando en el puerto 3000
+info: 2022-09-01T15:44:55.822Z Escuchando en el puerto 3000
+info: 2022-09-01T15:45:09.608Z ::1 - GET /usuarios HTTP/1.1 200 2 - 2.503 ms
+info: 2022-09-01T15:53:07.022Z ::1 - POST /usuarios HTTP/1.1 201 29 - 97.401 ms
+info: 2022-09-01T15:54:41.211Z Usuario anton completó autenticación.
+info: 2022-09-01T15:54:41.213Z Usuario anton completó autenticación exitosamente.
+info: 2022-09-01T15:54:41.215Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 73.163 ms
+info: 2022-09-01T15:56:45.428Z ::1 - GET /productos HTTP/1.1 500 1469 - 1.662 ms
+info: 2022-09-01T15:58:59.843Z Escuchando en el puerto 3000
+info: 2022-09-01T15:59:07.480Z ::1 - GET /productos HTTP/1.1 200 2 - 11.002 ms
+info: 2022-09-01T16:02:56.083Z ::1 - POST /productos HTTP/1.1 401 - - 0.630 ms
+info: 2022-09-01T16:04:42.167Z ::1 - POST /productos HTTP/1.1 401 - - 0.317 ms
+info: 2022-09-01T16:05:18.508Z JWT token no es válido. Usuario con id e715f6a1-a50d-47cd-aa8d-2aa865aaaa8f no existe
+info: 2022-09-01T16:05:18.510Z ::1 - POST /productos HTTP/1.1 401 - - 3.099 ms
+info: 2022-09-01T16:05:23.354Z ::1 - POST /usuarios HTTP/1.1 201 29 - 72.502 ms
+info: 2022-09-01T16:05:27.191Z Usuario anton completó autenticación.
+info: 2022-09-01T16:05:27.193Z Usuario anton completó autenticación exitosamente.
+info: 2022-09-01T16:05:27.195Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 74.316 ms
+info: 2022-09-01T16:05:43.331Z Usuario anton suministro de token valido. Autenticación completada.
+info: 2022-09-01T16:05:43.342Z ::1 - POST /productos HTTP/1.1 500 1508 - 10.838 ms
+info: 2022-09-01T16:06:58.026Z Escuchando en el puerto 3000
+info: 2022-09-01T16:07:39.787Z Escuchando en el puerto 3000
+info: 2022-09-01T16:09:20.554Z ::1 - POST /usuarios HTTP/1.1 201 29 - 71.780 ms
+info: 2022-09-01T16:09:41.464Z JWT token no es válido. Usuario con id e7a78d33-bc49-405d-904c-2e64b5ecdb6a no existe
+info: 2022-09-01T16:09:41.466Z ::1 - POST /productos HTTP/1.1 401 - - 3.459 ms
+info: 2022-09-01T16:09:49.372Z ::1 - GET /productos HTTP/1.1 200 2 - 11.345 ms
+info: 2022-09-01T16:09:53.998Z Usuario anton completó autenticación.
+info: 2022-09-01T16:09:54.001Z Usuario anton completó autenticación exitosamente.
+info: 2022-09-01T16:09:54.003Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 77.202 ms
+info: 2022-09-01T16:10:05.560Z Usuario anton suministro de token valido. Autenticación completada.
+info: 2022-09-01T16:10:05.570Z ::1 - POST /productos HTTP/1.1 500 1508 - 11.162 ms
+info: 2022-09-01T16:11:09.068Z Escuchando en el puerto 3000
+info: 2022-09-01T16:11:15.381Z ::1 - POST /usuarios HTTP/1.1 201 29 - 73.471 ms
+info: 2022-09-01T16:11:16.934Z Email o username ya existen en la base de datos
+info: 2022-09-01T16:11:16.936Z ::1 - POST /usuarios HTTP/1.1 409 53 - 1.810 ms
+info: 2022-09-01T16:11:23.397Z Usuario anton completó autenticación.
+info: 2022-09-01T16:11:23.400Z Usuario anton completó autenticación exitosamente.
+info: 2022-09-01T16:11:23.402Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 73.915 ms
+info: 2022-09-01T16:11:35.936Z Usuario anton suministro de token valido. Autenticación completada.
+info: 2022-09-01T16:11:35.950Z ::1 - POST /productos HTTP/1.1 500 1508 - 15.599 ms
+info: 2022-09-01T16:13:51.228Z Escuchando en el puerto 3000
+info: 2022-09-01T16:16:03.523Z Escuchando en el puerto 3000
+info: 2022-09-01T16:16:16.827Z ::1 - POST /usuarios HTTP/1.1 201 29 - 73.012 ms
+info: 2022-09-01T16:16:37.329Z Usuario anton completó autenticación.
+info: 2022-09-01T16:16:37.331Z Usuario anton completó autenticación exitosamente.
+info: 2022-09-01T16:16:37.333Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 73.711 ms
+info: 2022-09-01T16:16:55.957Z Usuario anton suministro de token valido. Autenticación completada.
+info: 2022-09-01T16:16:55.971Z ::1 - POST /productos HTTP/1.1 500 1508 - 16.168 ms
+info: 2022-09-01T16:17:49.290Z Escuchando en el puerto 3000
+info: 2022-09-01T16:17:57.243Z ::1 - POST /usuarios HTTP/1.1 201 29 - 85.776 ms
+info: 2022-09-01T16:18:04.466Z Usuario anton completó autenticación.
+info: 2022-09-01T16:18:04.468Z Usuario anton completó autenticación exitosamente.
+info: 2022-09-01T16:18:04.470Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 72.667 ms
+info: 2022-09-01T16:18:18.443Z Usuario anton suministro de token valido. Autenticación completada.
+info: 2022-09-01T16:18:18.467Z Producto agregado a la colección producto.
+info: 2022-09-01T16:18:18.470Z ::1 - POST /productos HTTP/1.1 201 111 - 29.608 ms
+info: 2022-09-01T16:19:49.514Z ::1 - GET /productos HTTP/1.1 200 113 - 8.577 ms
+info: 2022-09-01T16:23:27.763Z Escuchando en el puerto 3000
+info: 2022-09-01T16:23:52.603Z Escuchando en el puerto 3000
+info: 2022-09-01T16:29:35.928Z Escuchando en el puerto 3000
+info: 2022-09-01T16:31:56.171Z ::1 - GET /productos/6310db4a851a864268597f84 HTTP/1.1 200 111 - 14.914 ms
+info: 2022-09-01T17:13:15.027Z Escuchando en el puerto 3000
+info: 2022-10-04T14:29:52.328Z Escuchando en el puerto 3000
+info: 2022-10-04T14:30:16.947Z ::1 - GET /productos HTTP/1.1 200 113 - 48.345 ms
+info: 2022-10-04T14:59:24.995Z Escuchando en el puerto 3000
+info: 2022-10-04T15:02:28.468Z ::1 - POST /productos HTTP/1.1 401 - - 3.978 ms
+info: 2022-10-04T15:17:09.738Z Escuchando en el puerto 3000
+info: 2022-10-05T17:15:23.118Z Escuchando en el puerto 3000
+info: 2022-10-05T17:15:24.334Z ::1 - GET /productos HTTP/1.1 200 113 - 20.290 ms
+info: 2022-10-05T17:16:08.332Z ::1 - GET /productos/6310db4a851a864268597f84 HTTP/1.1 200 111 - 6.591 ms
+info: 2022-10-05T17:17:08.280Z ::1 - GET /productos/6310db4a851a864268597f8465765 HTTP/1.1 400 74 - 0.837 ms
+error: 2022-10-05T17:17:08.285Z Excepción ocurrió al tratar de obtener producto con id [6310db4a851a864268597f8465765] Cast to ObjectId failed for value "6310db4a851a864268597f8465765" (type string) at path "_id" for model "producto" {"kind":"ObjectId","path":"_id","reason":{},"stack":"CastError: Cast to ObjectId failed for value \"6310db4a851a864268597f8465765\" (type string) at path \"_id\" for model \"producto\"\n    at model.Query.exec (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\mongoose\\lib\\query.js:4884:21)\n    at model.Query.Query.then (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\mongoose\\lib\\query.js:4983:15)\n    at D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js:37:10\n    at Layer.handle [as handle_request] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at validarId (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js:21:5)\n    at Layer.handle [as handle_request] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at Layer.handle [as handle_request] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\layer.js:95:5)","stringValue":"\"6310db4a851a864268597f8465765\"","value":"6310db4a851a864268597f8465765","valueType":"string"}
+error: 2022-10-05T17:17:08.356Z uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:371:5)
+    at ServerResponse.setHeader (node:_http_outgoing:576:11)
+    at ServerResponse.header (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.send (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\response.js:174:12)
+    at D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.routes.js:46:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {"date":"Wed Oct 05 2022 12:17:08 GMT-0500 (hora estándar de Colombia)","error":{"code":"ERR_HTTP_HEADERS_SENT"},"exception":true,"os":{"loadavg":[0,0,0],"uptime":3404},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18294060,"external":19227404,"heapTotal":25735168,"heapUsed":23369672,"rss":53432320},"pid":7636,"uid":null,"version":"v16.14.0"},"stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:371:5)\n    at ServerResponse.setHeader (node:_http_outgoing:576:11)\n    at ServerResponse.header (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\response.js:794:10)\n    at ServerResponse.send (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\response.js:174:12)\n    at D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js:46:29\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","trace":[{"column":5,"file":"node:internal/errors","function":"new NodeError","line":371,"method":null,"native":false},{"column":11,"file":"node:_http_outgoing","function":"ServerResponse.setHeader","line":576,"method":"setHeader","native":false},{"column":10,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\response.js","function":"ServerResponse.header","line":794,"method":"header","native":false},{"column":12,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\response.js","function":"ServerResponse.send","line":174,"method":"send","native":false},{"column":29,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js","function":null,"line":46,"method":null,"native":false},{"column":5,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":96,"method":null,"native":false}]}
+info: 2022-10-05T17:17:48.082Z Escuchando en el puerto 3000
+info: 2022-10-05T17:18:00.567Z ::1 - GET /productos/6310db4a851a864268597f84 HTTP/1.1 200 111 - 17.435 ms
+info: 2022-10-05T17:18:05.194Z ::1 - GET /productos/6310db4a851a864268597f84eerr HTTP/1.1 400 73 - 1.066 ms
+error: 2022-10-05T17:18:05.200Z Excepción ocurrió al tratar de obtener producto con id [6310db4a851a864268597f84eerr] Cast to ObjectId failed for value "6310db4a851a864268597f84eerr" (type string) at path "_id" for model "producto" {"kind":"ObjectId","path":"_id","reason":{},"stack":"CastError: Cast to ObjectId failed for value \"6310db4a851a864268597f84eerr\" (type string) at path \"_id\" for model \"producto\"\n    at model.Query.exec (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\mongoose\\lib\\query.js:4884:21)\n    at model.Query.Query.then (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\mongoose\\lib\\query.js:4983:15)\n    at D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js:37:10\n    at Layer.handle [as handle_request] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at validarId (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js:21:5)\n    at Layer.handle [as handle_request] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at Layer.handle [as handle_request] (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\router\\layer.js:95:5)","stringValue":"\"6310db4a851a864268597f84eerr\"","value":"6310db4a851a864268597f84eerr","valueType":"string"}
+error: 2022-10-05T17:18:05.225Z uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:371:5)
+    at ServerResponse.setHeader (node:_http_outgoing:576:11)
+    at ServerResponse.header (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.send (D:\COMPUTACION\NODE\express_api_apdel_240822\node_modules\express\lib\response.js:174:12)
+    at D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.routes.js:46:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {"date":"Wed Oct 05 2022 12:18:05 GMT-0500 (hora estándar de Colombia)","error":{"code":"ERR_HTTP_HEADERS_SENT"},"exception":true,"os":{"loadavg":[0,0,0],"uptime":3461},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18288507,"external":19221851,"heapTotal":25473024,"heapUsed":23092608,"rss":52940800},"pid":1872,"uid":null,"version":"v16.14.0"},"stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at new NodeError (node:internal/errors:371:5)\n    at ServerResponse.setHeader (node:_http_outgoing:576:11)\n    at ServerResponse.header (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\response.js:794:10)\n    at ServerResponse.send (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\response.js:174:12)\n    at D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js:46:29\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)","trace":[{"column":5,"file":"node:internal/errors","function":"new NodeError","line":371,"method":null,"native":false},{"column":11,"file":"node:_http_outgoing","function":"ServerResponse.setHeader","line":576,"method":"setHeader","native":false},{"column":10,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\response.js","function":"ServerResponse.header","line":794,"method":"header","native":false},{"column":12,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\node_modules\\express\\lib\\response.js","function":"ServerResponse.send","line":174,"method":"send","native":false},{"column":29,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js","function":null,"line":46,"method":null,"native":false},{"column":5,"file":"node:internal/process/task_queues","function":"processTicksAndRejections","line":96,"method":null,"native":false}]}
+info: 2022-10-05T17:20:40.565Z Escuchando en el puerto 3000
+info: 2022-10-05T17:20:49.709Z ::1 - GET /productos/6310db4a851a864268597f84eerr HTTP/1.1 400 73 - 3.917 ms
+info: 2022-10-05T17:20:57.147Z ::1 - GET /productos/6310db4a851a864268597f84 HTTP/1.1 200 111 - 11.534 ms
+info: 2022-10-05T17:22:44.859Z Escuchando en el puerto 3000
+info: 2022-10-05T17:22:54.188Z Escuchando en el puerto 3000
+info: 2022-10-05T17:23:04.069Z Escuchando en el puerto 3000
+info: 2022-10-05T17:23:31.187Z Escuchando en el puerto 3000
+info: 2022-10-05T17:23:48.456Z Escuchando en el puerto 3000
+info: 2022-10-05T17:26:16.554Z Escuchando en el puerto 3000
+info: 2022-10-05T17:28:25.296Z Escuchando en el puerto 3000
+info: 2022-10-05T17:29:18.277Z Escuchando en el puerto 3000
+info: 2022-10-05T17:29:27.507Z Escuchando en el puerto 3000
+info: 2022-10-05T17:30:36.837Z Escuchando en el puerto 3000
+info: 2022-10-05T17:31:04.952Z Escuchando en el puerto 3000
+info: 2022-10-05T17:31:29.140Z Escuchando en el puerto 3000
+info: 2022-10-05T17:32:38.610Z Escuchando en el puerto 3000
+info: 2022-10-05T17:33:18.466Z Escuchando en el puerto 3000
+info: 2022-10-05T17:35:42.816Z Escuchando en el puerto 3000
+info: 2022-10-05T17:36:21.806Z Escuchando en el puerto 3000
+info: 2022-10-05T17:36:23.989Z Escuchando en el puerto 3000
+info: 2022-10-05T17:37:10.923Z Escuchando en el puerto 3000
+info: 2022-10-05T17:38:19.648Z Escuchando en el puerto 3000
+info: 2022-10-05T17:39:19.389Z Escuchando en el puerto 3000
+info: 2022-10-05T17:44:10.686Z ::1 - DELETE /productos/6310db4a851a864268597f84e HTTP/1.1 401 - - 1.440 ms
+info: 2022-10-05T17:44:22.959Z ::1 - POST /usuarios HTTP/1.1 201 29 - 75.340 ms
+info: 2022-10-05T17:44:26.371Z ::1 - GET /usuarios HTTP/1.1 200 165 - 1.023 ms
+info: 2022-10-05T17:46:34.135Z Usuario anton completó autenticación.
+info: 2022-10-05T17:46:34.137Z Usuario anton completó autenticación exitosamente.
+info: 2022-10-05T17:46:34.141Z ::1 - POST /usuarios/login HTTP/1.1 200 199 - 84.718 ms
+info: 2022-10-05T17:48:05.083Z Usuario anton suministro de token valido. Autenticación completada.
+info: 2022-10-05T17:48:05.085Z ::1 - DELETE /productos/6310db4a851a864268597f84e HTTP/1.1 400 70 - 3.765 ms
+info: 2022-10-05T17:48:16.447Z Usuario anton suministro de token valido. Autenticación completada.
+info: 2022-10-05T17:48:16.469Z Producto con id [6310db4a851a864268597f84] fue borrado.
+info: 2022-10-05T17:48:16.473Z ::1 - DELETE /productos/6310db4a851a864268597f84 HTTP/1.1 200 111 - 26.773 ms
+info: 2022-10-05T17:48:25.268Z ::1 - GET /productos HTTP/1.1 200 2 - 2.409 ms
+info: 2022-10-05T20:17:57.186Z Escuchando en el puerto 3000
+info: 2022-10-05T20:20:59.993Z Escuchando en el puerto 3000
+info: 2022-10-05T20:21:36.032Z Escuchando en el puerto 3000
+info: 2022-10-05T20:23:23.518Z Escuchando en el puerto 3000
+info: 2022-10-05T20:23:32.720Z Escuchando en el puerto 3000
+info: 2022-10-05T20:24:21.961Z Escuchando en el puerto 3000
+info: 2022-10-05T20:24:58.922Z Escuchando en el puerto 3000
+info: 2022-10-05T20:27:43.215Z Escuchando en el puerto 3000
+info: 2022-10-05T20:28:44.511Z Escuchando en el puerto 3000
+info: 2022-10-05T20:29:05.440Z Escuchando en el puerto 3000
+info: 2022-10-05T20:32:20.076Z Escuchando en el puerto 3000
+info: 2022-10-05T20:32:35.567Z Escuchando en el puerto 3000
+info: 2022-10-05T20:33:25.137Z Escuchando en el puerto 3000
+info: 2022-10-05T20:34:25.607Z Escuchando en el puerto 3000
+info: 2022-10-05T20:40:04.721Z Escuchando en el puerto 3000
+info: 2022-10-05T20:40:32.462Z Escuchando en el puerto 3000
+info: 2022-10-05T20:41:03.843Z Escuchando en el puerto 3000

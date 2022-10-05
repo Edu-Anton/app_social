@@ -11,7 +11,6 @@ const schema = Joi.object().keys({
 
 const validarProducto = (req, res, next) => {
     const resultado = schema.validate(req.body, { abortEarly: false, convert: false});
-    console.log(resultado.error);
     if (resultado.error === undefined) {
         next();
     } else {

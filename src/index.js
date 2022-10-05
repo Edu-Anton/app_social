@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
-const _ = require('underscore');
 const passport = require('passport');
-const BasicStrategy = require('passport-http').BasicStrategy;
+const mongoose = require('mongoose');
+// const BasicStrategy = require('passport-http').BasicStrategy;
 
 
 const productos = require('./database');
@@ -28,6 +28,13 @@ app.use(morgan('short', {
     }
 }));
 
+// Base de Datos
+mongoose.connect('mongodb://localhost:27017/vendetuscorotos');
+mongoose.connection.on('error', () => {
+    logger.error('Falló la conexión a mongodb');
+    process.exit(1);
+})
+
 // routes
 app.use('/productos', productosRouter);
 app.use('/usuarios', usuariosRouter);
@@ -39,6 +46,6 @@ app.get('/', passport.authenticate('jwt', { session: false}), (req, res) => {
     res.send('API de anton')
 });
 
-app.listen(config.jwt.puerto, () => {
+app.listen(config.puerto, () => {
     logger.info('Escuchando en el puerto 3000');
 });
