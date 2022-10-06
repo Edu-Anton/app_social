@@ -9,68 +9,100 @@ const log = require('./../../utils/logger');
 const usuarios = require('../../database').usuarios;
 const validarPedidoDeLogin = require('./usuarios.validate').validarPedidoDeLogin;
 const validarUsuario = require('./usuarios.validate').validarUsuario;
+const usuarioController = require('./usuarios.controller')
 
 const usuariosRouter = express.Router();
 
+// middlewares
+function transformarBodyALowercase(req, res, next) {
+    req.body.username && (req.body.username = req.body.username.toLowerCase())
+    req.body.email && (req.body.email = req.body.email.toLowerCase())
+    next()
+}
+
 usuariosRouter.get('/', (req, res) => {
-    res.json(usuarios);
-})
-
-usuariosRouter.post('/', validarUsuario, (req, res) => {
-    const newUser = req.body;
-    const indice = _.findIndex(usuarios, usuario => {
-        return usuario.username === newUser.username || usuario.email === newUser.email
-    })
-
-    if (indice !== -1) {
-        log.info('Email o username ya existen en la base de datos');
-        res.status(409).send('El email o username ya están asociados a una cuenta.');
-        return
-    }
-
-    bcrypt.hash(newUser.password, 10, (err, hashedPassword) => {
-        if (err) {
-            log.error('Error ocurrió al tratar de obtener el hash de una contaseña.', err);
-            res.status(500).send('Ocurrió un error procesando creación del usuario.');
-            return
-        }
-        usuarios.push({
-            username: newUser.username,
-            email: newUser.email,
-            password: hashedPassword,
-            id: uuidv4()
+    usuarioController.obtenerUsuarios()
+        .then(usuarios => {
+            res.json(usuarios)
         })
-        res.status(201).send('Usuario creado exitósamente.');
-    })
+        .catch(error => {
+            log.error('Error al obtener todos los usuarios', error)
+            res.sendStatus(500)
+        })
 })
 
-usuariosRouter.post('/login', validarPedidoDeLogin,(req, res) => {
-    const usuarioNoAutenticado = req.body;
-    const index = _.findIndex(usuarios, usuario => usuario.username === usuarioNoAutenticado.username);
+usuariosRouter.post('/', [validarUsuario, transformarBodyALowercase], (req, res) => {
+    const newUser = req.body;
 
-    if (index === -1) {
-        log.info(`Usuario ${usuarioNoAutenticado.username} no existe. No pudo ser autenticado.`);
-        res.status(400).send('Credenciales incorrectas. El usuario no existe.');
+    usuarioController.usuarioExiste(newUser.username, newUser.email)
+        .then(usuarioExiste => {
+            if (usuarioExiste) {
+                log.warn(`Email [${newUser.email}] o username [${newUser.username}] ya existen en la base de datos.`)
+                res.status(409).send('El email o usuario ya están asociados a una cuenta.')
+                return
+            }
+
+            bcrypt.hash(newUser.password, 10, (err, hashedPassword) => {
+                if (err) {
+                    log.error('Error ocurrió al tratar de obtener el hash de una contaseña.', err);
+                    res.status(500).send('Ocurrió un error procesando creación del usuario.');
+                    return
+                } 
+
+                usuarioController.crearUsuario(newUser, hashedPassword)
+                    .then(nuevoUsuario => {
+                        res.status(201).send('Usuario creado exitósamente.');
+                    })
+                    .catch(err => {
+                        log.error("Error ocurrió al tratar de crear nuevo usuario", err)
+                        res.status(500).send('Error ocurrió al tratar de crear nuevo usuario')
+                    })
+            })
+        })
+        .catch(error => {
+            log.error(`Error ocurrió al tratar de verificar si usuario [${newUser.username}] con email [${newUser.email}] ya existe.`)
+            res.status(500).send("Error ocurrió al tratar de crear nuevo usuario.")
+        })
+})
+
+usuariosRouter.post('/login', [validarPedidoDeLogin, transformarBodyALowercase], async(req, res) => {
+    const usuarioNoAutenticado = req.body;
+
+    try {
+        usuarioRegistrado = await usuarioController.obtenerUsuario({
+            username: usuarioNoAutenticado.username
+        })
+    } catch (error) {
+        log.error(`Error ocurrió al tratar de determinar si el usuario [${usuarioNoAutenticado.username}] ya existe, err`)
+        res.status(500).send('Error ocurrió durante el proceso de login.')
         return
     }
-    console.log(usuarios[index].username);
-    console.log(usuarios[index].password);
 
-    const hashedPassword = usuarios[index].password
-    bcrypt.compare(usuarioNoAutenticado.password, hashedPassword, (err, iguales) => {
-        if (iguales) {
-            log.info(`Usuario ${usuarioNoAutenticado.username} completó autenticación.`)
-            // generar y enviar token
-            const token = jwt.sign({ id: usuarios[index].id }, config.jwt.secreto, { expiresIn: 86400 })
-            log.info(`Usuario ${usuarioNoAutenticado.username} completó autenticación exitosamente.`)
-            res.status(200).json({ token })
-        } else {
-            log.info(`Usuario ${usuarioNoAutenticado.username} no completó autenticación. Contraseña incorrecta.`);
-            log.warn(err);
-            res.status(400).send('Credenciales incorrectas. Asegúrate que el username y contraseña sean correctas.');
-        }
-    })
+    if (!usuarioRegistrado) {
+        log.info(`Usuario [${usuarioNoAutenticado.username}] no existe. No pudo ser autenticado.`)
+        res.status(400).send('Credenciales incorrectas. Asegúrate que el usuario y contraseña sean correctos.')
+        return
+    }
 
+    let contraseñaCorrecta
+    try {
+        contraseñaCorrecta = await bcrypt.compare(usuarioNoAutenticado.password, usuarioRegistrado.password)
+    } catch (err) {
+        log.error(`Error ocurrió al tratar de verificar si la contraseña es correcta`, err)
+        res.status(500).send('Error ocurrió durante el proceso de login.')
+        return
+    }
+
+    if (contraseñaCorrecta) {
+        // generar y enviar token
+        const token = jwt.sign({ id: usuarioRegistrado.id }, config.jwt.secreto, { expiresIn: 86400 })
+        log.info(`Usuario ${usuarioNoAutenticado.username} completó autenticación exitosamente.`)
+        res.status(200).json({ token })
+    } else {
+        log.info(`Usuario ${usuarioNoAutenticado.username} no completó autenticación. Contraseña incorrecta.`);
+        log.warn(err);
+        res.status(400).send('Credenciales incorrectas. Asegúrate que el username y contraseña sean correctas.');
+    }
 })
 
 module.exports = usuariosRouter;
