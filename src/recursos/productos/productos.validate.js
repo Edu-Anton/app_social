@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const productos = require('../../database').productos;
+// const productos = require('../../database').productos;
 const log = require('./../../utils/logger');
 
 const schema = Joi.object().keys({

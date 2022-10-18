@@ -1,6 +1,6 @@
 const Joi = require('joi');
 
-const usuarios = require('../../database').usuarios;
+// const usuarios = require('../../database').usuarios;
 const log = require('./../../utils/logger');
 
 const schema = Joi.object().keys({

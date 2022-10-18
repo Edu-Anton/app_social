@@ -738,3 +738,158 @@ info: 2022-10-05T23:51:03.473Z Escuchando en el puerto 3000
 info: 2022-10-05T23:53:28.455Z Escuchando en el puerto 3000
 info: 2022-10-06T00:00:05.596Z Escuchando en el puerto 3000
 info: 2022-10-06T00:00:29.049Z Escuchando en el puerto 3000
+info: 2022-10-06T16:29:52.821Z Escuchando en el puerto 3000
+info: 2022-10-06T16:29:53.399Z ::1 - GET /usuarios HTTP/1.1 200 325 - 19.152 ms
+info: 2022-10-06T16:30:02.624Z Usuario anton completó autenticación exitosamente.
+info: 2022-10-06T16:30:02.627Z ::1 - POST /usuarios/login HTTP/1.1 200 183 - 77.581 ms
+info: 2022-10-06T16:30:52.585Z ::1 - POST /productos HTTP/1.1 401 - - 1.836 ms
+info: 2022-10-06T16:31:24.948Z Usuario anton suministro de token valido. Autenticación completada.
+info: 2022-10-06T16:31:24.965Z Producto agregado a la colección producto. {"__v":0,"_id":"633f02dcc277c3c8a488781a","dueño":"anton","moneda":"USD","precio":1000,"titulo":"Monitor Full HD 24pulg."}
+info: 2022-10-06T16:31:24.967Z ::1 - POST /productos HTTP/1.1 201 123 - 22.622 ms
+error: 2022-10-18T03:04:15.357Z uncaughtException: Cannot find module '../../database'
+Require stack:
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.validate.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.routes.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js
+Error: Cannot find module '../../database'
+Require stack:
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.validate.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.routes.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.validate.js:3:19)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19) {"date":"Mon Oct 17 2022 22:04:15 GMT-0500 (hora estándar de Colombia)","error":{"code":"MODULE_NOT_FOUND","requireStack":["D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.validate.js","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"]},"exception":true,"os":{"loadavg":[0,0,0],"uptime":199973},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18912505,"external":22235851,"heapTotal":36220928,"heapUsed":25932088,"rss":63807488},"pid":10376,"uid":null,"version":"v16.14.0"},"stack":"Error: Cannot find module '../../database'\nRequire stack:\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.validate.js\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js\n    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)\n    at Function.Module._load (node:internal/modules/cjs/loader:778:27)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.validate.js:3:19)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)","trace":[{"column":15,"file":"node:internal/modules/cjs/loader","function":"Module._resolveFilename","line":933,"method":"_resolveFilename","native":false},{"column":27,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":778,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":19,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.validate.js","function":null,"line":3,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false}]}
+error: 2022-10-18T03:04:29.195Z uncaughtException: Cannot find module '../../database'
+Require stack:
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.validate.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.routes.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js
+Error: Cannot find module '../../database'
+Require stack:
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.validate.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.routes.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\productos\productos.validate.js:3:19)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19) {"date":"Mon Oct 17 2022 22:04:29 GMT-0500 (hora estándar de Colombia)","error":{"code":"MODULE_NOT_FOUND","requireStack":["D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.validate.js","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"]},"exception":true,"os":{"loadavg":[0,0,0],"uptime":199987},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18874178,"external":22197524,"heapTotal":36220928,"heapUsed":26000584,"rss":63791104},"pid":12680,"uid":null,"version":"v16.14.0"},"stack":"Error: Cannot find module '../../database'\nRequire stack:\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.validate.js\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.routes.js\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js\n    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)\n    at Function.Module._load (node:internal/modules/cjs/loader:778:27)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.validate.js:3:19)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)","trace":[{"column":15,"file":"node:internal/modules/cjs/loader","function":"Module._resolveFilename","line":933,"method":"_resolveFilename","native":false},{"column":27,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":778,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":19,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\productos\\productos.validate.js","function":null,"line":3,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false}]}
+error: 2022-10-18T03:05:11.607Z uncaughtException: Cannot find module '../../database'
+Require stack:
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.validate.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js
+Error: Cannot find module '../../database'
+Require stack:
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.validate.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.validate.js:3:18)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19) {"date":"Mon Oct 17 2022 22:05:11 GMT-0500 (hora estándar de Colombia)","error":{"code":"MODULE_NOT_FOUND","requireStack":["D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"]},"exception":true,"os":{"loadavg":[0,0,0],"uptime":200029},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18522369,"external":24176352,"heapTotal":38842368,"heapUsed":26293008,"rss":66142208},"pid":8812,"uid":null,"version":"v16.14.0"},"stack":"Error: Cannot find module '../../database'\nRequire stack:\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js\n    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)\n    at Function.Module._load (node:internal/modules/cjs/loader:778:27)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js:3:18)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)","trace":[{"column":15,"file":"node:internal/modules/cjs/loader","function":"Module._resolveFilename","line":933,"method":"_resolveFilename","native":false},{"column":27,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":778,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":18,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js","function":null,"line":3,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false}]}
+error: 2022-10-18T03:05:47.431Z uncaughtException: Cannot find module '../../database'
+Require stack:
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.validate.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js
+Error: Cannot find module '../../database'
+Require stack:
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.validate.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.routes.js
+- D:\COMPUTACION\NODE\express_api_apdel_240822\src\index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (D:\COMPUTACION\NODE\express_api_apdel_240822\src\recursos\usuarios\usuarios.validate.js:3:18)
+    at Module._compile (node:internal/modules/cjs/loader:1103:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19) {"date":"Mon Oct 17 2022 22:05:47 GMT-0500 (hora estándar de Colombia)","error":{"code":"MODULE_NOT_FOUND","requireStack":["D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"]},"exception":true,"os":{"loadavg":[0,0,0],"uptime":200065},"process":{"argv":["C:\\Program Files\\nodejs\\node.exe","D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js"],"cwd":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822","execPath":"C:\\Program Files\\nodejs\\node.exe","gid":null,"memoryUsage":{"arrayBuffers":18798270,"external":24176352,"heapTotal":55357440,"heapUsed":26708456,"rss":67170304},"pid":6228,"uid":null,"version":"v16.14.0"},"stack":"Error: Cannot find module '../../database'\nRequire stack:\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.routes.js\n- D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\index.js\n    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)\n    at Function.Module._load (node:internal/modules/cjs/loader:778:27)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js:3:18)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)","trace":[{"column":15,"file":"node:internal/modules/cjs/loader","function":"Module._resolveFilename","line":933,"method":"_resolveFilename","native":false},{"column":27,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":778,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false},{"column":18,"file":"node:internal/modules/cjs/helpers","function":"require","line":102,"method":null,"native":false},{"column":18,"file":"D:\\COMPUTACION\\NODE\\express_api_apdel_240822\\src\\recursos\\usuarios\\usuarios.validate.js","function":null,"line":3,"method":null,"native":false},{"column":14,"file":"node:internal/modules/cjs/loader","function":"Module._compile","line":1103,"method":"_compile","native":false},{"column":10,"file":"node:internal/modules/cjs/loader","function":"Module._extensions..js","line":1155,"method":".js","native":false},{"column":32,"file":"node:internal/modules/cjs/loader","function":"Module.load","line":981,"method":"load","native":false},{"column":12,"file":"node:internal/modules/cjs/loader","function":"Module._load","line":822,"method":"_load","native":false},{"column":19,"file":"node:internal/modules/cjs/loader","function":"Module.require","line":1005,"method":"require","native":false}]}
+info: 2022-10-18T03:06:48.184Z Escuchando en el puerto 3000
+info: 2022-10-18T03:06:55.929Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 7.121 ms
+warn: 2022-10-18T03:06:56.068Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:12:04.623Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 1.301 ms
+warn: 2022-10-18T03:12:04.629Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:12:22.444Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 1.036 ms
+warn: 2022-10-18T03:12:22.448Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:15:06.345Z Escuchando en el puerto 3000
+info: 2022-10-18T03:15:11.440Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 6.020 ms
+warn: 2022-10-18T03:15:11.456Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:18:54.349Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 1.381 ms
+warn: 2022-10-18T03:18:54.353Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:26:07.406Z Escuchando en el puerto 3000
+info: 2022-10-18T03:26:14.254Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 7.950 ms
+warn: 2022-10-18T03:26:14.270Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:26:23.366Z Escuchando en el puerto 3000
+info: 2022-10-18T03:26:25.675Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 9.842 ms
+warn: 2022-10-18T03:26:25.689Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:26:34.749Z Escuchando en el puerto 3000
+info: 2022-10-18T03:26:35.835Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 7.020 ms
+warn: 2022-10-18T03:26:35.850Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:28:17.339Z Escuchando en el puerto 3000
+info: 2022-10-18T03:28:19.667Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 6.123 ms
+warn: 2022-10-18T03:28:19.683Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:28:20.700Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 2.491 ms
+warn: 2022-10-18T03:28:20.703Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:28:21.411Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 0.689 ms
+warn: 2022-10-18T03:28:21.417Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:28:23.359Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 1.020 ms
+warn: 2022-10-18T03:28:23.362Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:29:20.119Z Escuchando en el puerto 3000
+info: 2022-10-18T03:29:26.776Z ::1 - POST /usuarios HTTP/1.1 500 1324 - 8.657 ms
+warn: 2022-10-18T03:29:26.795Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:29:34.460Z ::1 - GET /usuarios HTTP/1.1 500 1294 - 1.297 ms
+info: 2022-10-18T03:30:31.143Z ::1 - GET /usuarios HTTP/1.1 500 1294 - 0.931 ms
+info: 2022-10-18T03:30:32.341Z ::1 - GET /usuarios HTTP/1.1 500 1294 - 0.471 ms
+info: 2022-10-18T03:30:33.167Z ::1 - GET /usuarios HTTP/1.1 500 1294 - 0.971 ms
+info: 2022-10-18T03:30:33.755Z ::1 - GET /usuarios HTTP/1.1 500 1294 - 0.502 ms
+info: 2022-10-18T03:30:36.611Z ::1 - GET /usuarios HTTP/1.1 500 1294 - 0.542 ms
+info: 2022-10-18T03:30:39.983Z ::1 - GET /usuarios HTTP/1.1 500 1294 - 0.631 ms
+info: 2022-10-18T03:30:47.908Z ::1 - GET /usuarios HTTP/1.1 500 1294 - 0.571 ms
+info: 2022-10-18T03:31:53.729Z Escuchando en el puerto 3000
+info: 2022-10-18T03:31:55.970Z ::1 - GET /usuarios HTTP/1.1 200 325 - 12.832 ms
+warn: 2022-10-18T03:32:05.197Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:32:05.201Z ::1 - POST /usuarios HTTP/1.1 409 338 - 7.539 ms
+info: 2022-10-18T03:32:35.408Z Escuchando en el puerto 3000
+info: 2022-10-18T03:43:48.117Z Escuchando en el puerto 3000
+info: 2022-10-18T03:44:09.726Z Escuchando en el puerto 3000
+info: 2022-10-18T03:44:17.710Z Escuchando en el puerto 3000
+info: 2022-10-18T03:44:53.292Z Escuchando en el puerto 3000
+info: 2022-10-18T03:46:02.466Z Escuchando en el puerto 3000
+warn: 2022-10-18T03:46:16.195Z Email [anton@mail.com] o username [anton] ya existen en la base de datos.
+info: 2022-10-18T03:46:16.207Z ::1 - POST /usuarios HTTP/1.1 409 338 - 19.079 ms
+info: 2022-10-18T03:49:11.284Z Escuchando en el puerto 3000
+info: 2022-10-18T03:49:30.694Z Escuchando en el puerto 3000
+info: 2022-10-18T03:50:25.379Z Escuchando en el puerto 3000
+info: 2022-10-18T03:50:50.026Z Escuchando en el puerto 3000
+info: 2022-10-18T03:51:10.954Z Usuario anton completó autenticación exitosamente.
+info: 2022-10-18T03:51:10.961Z ::1 - POST /usuarios/login HTTP/1.1 200 183 - 102.467 ms
+info: 2022-10-18T03:51:16.412Z Usuario [anto] no existe. No pudo ser autenticado.
+info: 2022-10-18T03:51:16.415Z ::1 - POST /usuarios/login HTTP/1.1 400 396 - 4.869 ms
+info: 2022-10-18T03:53:23.326Z Escuchando en el puerto 3000
+info: 2022-10-18T03:55:38.564Z Escuchando en el puerto 3000
+info: 2022-10-18T03:55:39.497Z Escuchando en el puerto 3000
+info: 2022-10-18T03:55:59.100Z Escuchando en el puerto 3000
+info: 2022-10-18T03:57:23.787Z Escuchando en el puerto 3000
+info: 2022-10-18T03:59:16.992Z Escuchando en el puerto 3000

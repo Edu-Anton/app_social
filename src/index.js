@@ -6,13 +6,14 @@ const mongoose = require('mongoose');
 // const BasicStrategy = require('passport-http').BasicStrategy;
 
 
-const productos = require('./database');
+// const productos = require('./database');
 const productosRouter = require('./recursos/productos/productos.routes');
 const usuariosRouter = require('./recursos/usuarios/usuarios.routes');
 const logger = require('./utils/logger');
 // const auth = require('./libs/auth');
 const authJWT = require('./libs/auth');
 const config = require('./config');
+const errorHandler = require('./libs/errorHandler');
 
 // Authentication
 // passport.use(new BasicStrategy(auth));
@@ -38,6 +39,14 @@ mongoose.connection.on('error', () => {
 // routes
 app.use('/productos', productosRouter);
 app.use('/usuarios', usuariosRouter);
+
+app.use(errorHandler.procesarErroresDeBD);
+
+if (config.ambiente === 'prod') {
+    app.use(errorHandler.erroresEnProduccion)
+} else {
+    app.use(errorHandler.erroresEnDesarrollo)
+}
 
 // app.get('/', passport.authenticate('basic', { session: false}), (req, res) => {
 app.get('/', passport.authenticate('jwt', { session: false}), (req, res) => {

@@ -16,6 +16,9 @@ switch (ambiente) {
     case 'produccion':
     case 'prod':
         configuracionDeAmbiente = require('./prod')
+        break
+    default:
+        configuracionDeAmbiente = require('./dev')
 }
 
 module.exports = {
